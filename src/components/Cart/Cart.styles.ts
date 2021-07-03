@@ -21,8 +21,25 @@ export const Wrapper = styled.aside`
 		background-color: #e1e1e1;
 	}
 
-	h2 {
+	section {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 		margin-top: 16px;
+	}
+	.pay-btn {
+		background-color: #34d399;
+		border: none;
+		padding: 8px 16px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		cursor: pointer;
+		color: white;
+	}
+	.pay-btn:hover {
+		background-color: #6ee7b7;
 	}
 `;
 

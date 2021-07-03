@@ -44,7 +44,13 @@ const Cart: React.FC<Props> = ({
 					removeFromCart={removeFromCart}
 				/>
 			))}
-			<h2>Total: ${calculateTotal(cartItems).toFixed(2)}</h2>
+
+			<section>
+				<h2>Total: ${calculateTotal(cartItems).toFixed(2)}</h2>
+				{cartItems.length === 0 ? null : (
+					<button className='pay-btn'>Continue Payment</button>
+				)}
+			</section>
 		</Wrapper>
 	);
 };

@@ -4,6 +4,7 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 // import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import Rating from '@material-ui/lab/Rating';
 
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
@@ -40,6 +41,16 @@ const PromoCards: React.FC<any> = (props) => {
 					<Typography component='h5' variant='h5' style={{ color: '#374151' }}>
 						{item.title}
 					</Typography>
+					<Rating
+						style={{
+							marginLeft: '-5px',
+							marginTop: '10px',
+							marginBottom: '10px',
+						}}
+						name='read-only'
+						value={Math.floor(Math.random() * (5 - 1 + 1)) + 1}
+						readOnly
+					/>
 					<Typography variant='subtitle1' style={{ color: '#6B7280' }}>
 						{item.description}
 					</Typography>
